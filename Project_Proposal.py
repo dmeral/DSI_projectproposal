@@ -10,7 +10,6 @@ from mpl_toolkits.basemap import Basemap
 
 data = pd.read_csv('NpdbPublicUseDataCsv/NPDB1710.CSV',delimiter=',',low_memory=False)
 
-
 state_pop = pd.read_excel('nst-est2016-01.xlsx',header=3,skip_footer=5)
 
 new_index_list = {}
@@ -25,9 +24,7 @@ for s_label in state_pop.index:
 
 state_pop.rename(new_index_list, axis='index',inplace=True)
 
-
 common_states = np.intersect1d(list(data["WORKSTAT"].unique()),list(state_pop["State Abb"]))
-
 
 data["PAYMENT"].replace('[\$,]', '', regex=True, inplace=True)
 
@@ -50,7 +47,6 @@ for state in common_states:
         pay_count = pd.concat([pay_count, stack], axis=1)
 
 
-
 state_slope = []
 for state in common_states:
     slope, intercept, rvalue, pvalue, stderr = scipy.stats.linregress(range(1991,2018),
@@ -58,8 +54,6 @@ for state in common_states:
     state_slope.append([state,slope,intercept])
     
 df_state_slope=pd.DataFrame(state_slope,columns=["state","slope","intercept"])
-#df_state_slope #.sort_values("slope")
-
 
 correlation_slope = np.zeros((len(common_states),len(common_states)))
 
@@ -71,6 +65,7 @@ for state1 in range(len(common_states)):
             float(df_state_slope[df_state_slope["state"]==common_states[state1]]["slope"])-
             float(df_state_slope[df_state_slope["state"]==common_states[state2]]["slope"])))**2
         
+
 
 from sklearn.cluster import DBSCAN
 # Compute DBSCAN
@@ -101,6 +96,7 @@ for i in np.unique(df_state_slope_cluster_aslope["avg_slopes"].sort_values()):
     start += 1
 
 
+
 from bokeh.io import show, save, output_notebook, export_png
 from bokeh.models import (
     ColumnDataSource,
@@ -121,7 +117,6 @@ from bokeh.resources import CDN
 from bokeh.embed import file_html
 from bokeh.palettes import PRGn11 as palette
 from bokeh.palettes import Category20,Spectral11,Category10,PRGn11
-
 
 
 try:
@@ -151,7 +146,6 @@ lat_inkm = 111.132 ## at around lat = 45degrees from the wiki latitude page
 lon_inkm = 78.847 ## at around lat = 45degrees from the wiki latitude page
 
 
-
 text_position_x = []
 for statex in state_xs:
     text_position_x.append(float("%.5f" % round(max(statex)-(max(statex)-min(statex))/2,5)))
@@ -167,16 +161,12 @@ for name in state_names:
     abbr = state_pop.loc[name]["State Abb"]
     state_clusters.append(palette[int(df_state_slope_cluster_aslope_acolor[df_state_slope_cluster_aslope_acolor["state"]==abbr]["cl_colors"])])
 
-#state_clusters
-
-
 
 cluster_label = []
 for name in state_names:
     abbr = state_pop.loc[name]["State Abb"]
     cluster_label.append(int(df_state_slope_cluster_aslope_acolor[df_state_slope_cluster_aslope_acolor["state"]==abbr]["cluster"]))
 
-#cluster_label
 
 
 output_notebook()
@@ -194,7 +184,7 @@ source = ColumnDataSource(data=dict(
 
 TOOLS = "pan,wheel_zoom,reset,hover,save"
 
-p = figure(title="Change in the number of malpractice cases filed per a million citizens per states, 1990-2018", 
+p = figure(title="Overall change in the number of malpractice cases filed per a million citizens per state, 1990-2018", 
     plot_width=int((max(max(state_xs))-min(min(state_xs)))*lon_inkm/4.5), 
     plot_height=int((max(max(state_ys))-min(min(state_ys)))*lat_inkm/4.5), tools=TOOLS,
     x_axis_location=None, y_axis_location=None
@@ -223,23 +213,24 @@ hover.tooltips ="""
 show(p)
 
 
+output_notebook()
 
-p = figure(plot_width=850, plot_height=500, tools=[hover], x_axis_label='Years', y_axis_label='Malpractice cases filed per 1,000,000')
-p.title.text = "Malpractice case per 1,000,000 citizens per year for a group of states which successfully diminished this number in the last two decades."
+
+p = figure(plot_width=850, plot_height=500, x_axis_label='Years', y_axis_label='Malpractice cases filed per 1,000,000')
+p.title.text = "Malpractice case per 1,000,000 citizens per year for MT, NY, OH, and PA."
 
 cluster_num = 6
 cur_states = list(df_state_slope_cluster_aslope_acolor[df_state_slope_cluster_aslope_acolor["cluster"]==cluster_num]["state"])
 
 for state, color in zip(cur_states, Category20[20]):
-    curve = pay_count[state,"count_per_10000"]
+    curve = pay_count[state,"count_per_1000000"]
     plt.plot(range(1990,2018),curve,label=state,marker='.')
     p.line(curve.index, curve,line_width=2, color=color, alpha=1.,
            muted_color=color, muted_alpha=0.2, legend=state)
 
+
 p.legend.location = "top_left"
 p.legend.click_policy="mute"
-
-output_notebook()
 
 show(p)
 

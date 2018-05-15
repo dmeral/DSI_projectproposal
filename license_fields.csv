@@ -1,0 +1,173 @@
+Value,Label,Date
+10,Allopathic Physician (MD),
+15,Physician Resident (MD),
+20,Osteopathic Physician (DO),
+25,Osteopathic Physician Resident (DO),
+30,Dentist,
+35,Dental Resident,
+50,Pharmacist,
+55,Pharmacy Intern ,[available 9/9/2002]
+60,"Pharmacist, Nuclear",
+70,Pharmacy Assistant,
+75,Pharmacy Technician ,[available 9/9/2002]
+76,Other Pharmacy Service Occupation,[available 11/17/2014]
+100,Registered Nurse,
+110,Nurse Anesthetist,
+120,Nurse Midwife,
+130,Nurse Practitioner,
+134,Doctor of Nursing Practice ,[available 11/8/2010]
+135,Advanced Nurse Practitioner ,[3/5/02 - 9/9/02]
+140,LPN or Vocational Nurse,
+141,Clinical Nurse Specialist ,[available 9/9/02]
+142,Other Nurse Occupation,[available 11/17/2014]
+148,Certified Nurse Aide/Nursing Assistant ,[available 10/17/05]
+150,Nurse Aide/Nursing Assistant,
+160,Home Health Aide (Homemaker),
+165,Health Care Aide/Direct Care Worker ,[available 10/17/05]
+170,Psychiatric Technician,
+175,Certified or Qualified Medication Aide ,[available 10/17/05]
+176,Other Aide Occupation,[available 11/17/2014]
+200,Dietitian,
+210,Nutritionist,
+211,Other Dietitian/Nutritionist Occupation,[available 11/17/2014]
+250,"EMT, Basic",
+260,"EMT, Cardiac/Critical Care",
+270,"EMT, Intermediate/Critical Care",
+280,"EMT, Paramedic",
+281,Other Emergency Medical Technician Occupation,[available 11/17/2014]
+300,Clinical Social Worker,
+350,Podiatrist,
+370,Clinical Psychologist ,[last use 9/9/02]
+371,Psychologist ,[available 9/9/02]
+372,School Psychologist ,[available 9/9/02]
+373,"Psychological Asst., Assoc., Examiner",[available 9/9/02]
+374,Other Psychologist/Psychological Assistant Occupation,[available 11/17/2014]
+400,Audiologist,
+402,Art/Recreation Therapist,
+405,Massage Therapist,
+410,Occupational Therapist,
+420,Occup. Therapy Assistant,
+430,Physical Therapist,
+440,Phys. Therapy Assistant,
+450,Rehabilitation Therapist,
+460,Speech/Language Pathologist,
+470,Hearing Aid/Instrument Specialist,[available 10/17/05]
+471,"Other Speech, Language and Hearing Service Occupation ",[available 11/17/2014]
+500,Medical Technologist ,[changed to 501(6/15/09)]
+501,Medical or Clinical Lab Technician/Technologist ,[available 6/15/09]
+502,Medical/Clinical Lab Technician ,[available 6/15/09]
+503,Surgical Technologist/Assistant ,[available 6/15/09]
+504,Surgical Assistant ,[available 6/15/09]
+505,Cytotechnologist ,[available 11/22/99]
+510,Nuclear Med. Technologist,
+520,Rad. Therapy Technologist,
+530,Radiologic Technician/Technologist,
+540,X-Ray Technician or Operator ,[available 6/15/09]
+550,Limited X-Ray Machine Operator ,[available 11/8/2010]
+551,Other Technologist/Technician,[available 11/17/2014]
+600,Acupuncturist,
+601,Athletic Trainer ,[available 11/22/99]
+603,Chiropractor,
+604,Chiropractic Assistant ,[available 11/17/2014]
+605,Other Chiropractic Occupation,[available 11/17/2014]
+606,Dental Assistant,
+607,Dental Therapist/Dental Health Aide ,[available 6/15/09]
+609,Dental Hygienist,
+612,Denturist,
+613,Other Dental Occupation,[available 11/17/2014]
+615,Homeopath,
+618,Medical Assistant,
+621,"Counselor, Mental Health",
+624,"Midwife, Lay (Non-Nurse)",
+627,Naturopath,
+630,Ocularist,
+633,Optician,
+636,Optometrist,
+637,Other Eye and Vision Service Occupation,[available 11/17/2014]
+639,Orthotics/Prosthetics Fitter,
+642,Physician Assistant,
+645,"Phys. Asst., Osteopathic",
+647,Perfusionist ,[available 11/22/99]
+648,Podiatric Assistant,
+649,Other Podiatric Service Occupation,[available 11/17/2014]
+651,Prof. Counselor,
+652,Sex Offender Counselor ,[available 11/17/2014]
+653,Pastoral Counselor,[available 11/17/2014]
+654,"Prof. Cnslr., Alcohol",
+657,"Prof. Cnslr., Family/Marriage",
+658,"Other Rehabilitative, Respiratory and Restorative Service Occupation",[available 11/17/2014]
+660,Addictions Counselor,
+661,Marriage and Family Therapist ,[available 9/9/02]
+662,Art Therapist ,[available 11/17/2014]
+663,Respiratory Therapist,
+664,Recreation Therapist ,[available 11/17/2014]
+665,Dance Therapist ,[available 11/17/2014]
+666,Resp. Therapy Technician,
+667,Music Therapist ,[available 11/17/2014]
+668,Other Behavioral Health Occupation ,[available 11/17/2014]
+699,"Other Health Care Pract, Not Classified ",[available 11/22/99]
+752,Adult Care Facility Administrator ,[available 11/22/99]
+755,Hospital Administrator ,[available 11/22/99]
+758,Health Care Facility Administrator ,[available 6/15/09]
+759,Assisted Living Facility Administrator ,[available 6/15/09]
+800,"Researcher, Clinical ",[available 11/22/99]
+810,Insurance Agent/Broker ,[available 11/22/99]
+812,Insurance Broker ,[available 11/22/99]
+820,Corporate Officer ,[available 11/22/99]
+822,Business Manager ,[available 11/22/99]
+830,Business Owner ,[available 11/22/99]
+840,Salesperson ,[available 11/22/99]
+850,Accountant ,[available 11/22/99]
+853,Bookkeeper,[available 11/22/99]
+899,"Other Individual, Not Classified ",[available 11/22/99]
+998,Subject of Report Not Reportable (missing value),
+999,Unspecified or Unknown,
+1301,General/Acute Care Hospital,
+1302,Psychiatric Hospital,
+1303,Rehabilitation Hospital,
+1304,Federal Hospital,
+1307,Psychiatric Unit,
+1308,Rehabilitation Unit,
+1310,Laboratory/CLIA Laboratory,
+1320,Health Insurance Company/Provider,
+1331,Health Maintenance Organization,
+1335,Preferred Provider Organization,
+1336,Provider Sponsored Organization,
+1338,"Religious, Fraternal Benefit Society Plan",
+1342,Blood Bank,
+1343,Durable Medical Equipment Supplier,
+1344,Eyewear Equipment Supplier,
+1345,Pharmacy,
+1346,Pharmaceutical Manufacturer,
+1347,Biological Products Manufacturer,
+1348,Organ Procurement Organization,
+1349,Portable X-Ray Supplier,
+1351,Fiscal/Billing/Management Agent,
+1352,Purchasing Service,
+1353,Nursing/Health Care Staffing Service,
+1361,Chiropractic Group/Practice,
+1362,Dental Group/Practice,
+1363,Optician/Optometric Group/Practice,
+1364,Podiatric Group/Practice,
+1365,Medical Group/Practice,
+1366,Mental Health/Substance Abuse Group/Facility,
+1367,Physical/Occupational Therapy Group/Practice,
+1370,Research Center/Facility,
+1381,Adult Day Care Facility,
+1382,Hospice/Hospice Care Provider,
+1383,Intermed. Care Fclty For Intellectually Disabled/Substance Abuse,
+1386,Residential Treatment Facility/Program,
+1388,Outpatient Rehab. Fclty./Comprehensive Outptnt. Rehab. Fclty,
+1389,Nursing Facility/Skilled Nursing Facility,
+1390,Ambulance Service/Transportation Company,
+1391,Ambulatory Surgical Center,
+1392,Ambulatory Clinic/Center,
+1393,Home Health Agency/Organization,
+1394,Health Cntr/Fedrlly. Qualified Hlth Cntr./Cmmnty Hlth Cntr.,
+1395,Mental Health Center/Community Mental Health Center,
+1396,Rural Health Clinic,
+1397,Mammography Service Provider,
+1398,End Stage Renal Disease Facility,
+1399,Radiology/Imaging Center,
+1999,Other Type not classified - specify,
+9999,Org. Type not specified,
